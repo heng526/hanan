@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "device": {
+    "robot_id": "<FILL:现场机器编号>",
+    "firmware_version": "<FILL:固件版本>",
+    "sdk_version": "<FILL:SDK版本>",
+    "source_code_sha256": "<FILL:实际部署源码SHA256>"
+  },
+  "sources": {
+    "front_rgb": "<FILL:前相机来源标识>",
+    "rear_rgb": "<FILL:后相机来源标识>",
+    "lidar": "<FILL:雷达来源标识>",
+    "clock_domain": "<FILL:帧与回执时钟基准>"
+  },
+  "perception": {
+    "P1": {
+      "processor_ref": "<FILL:P1处理器本地相对路径>",
+      "calibration_ref": "<FILL:P1标定本地相对路径>",
+      "input_frame": "<FILL:P1输入坐标系>",
+      "output_frame": "<FILL:P1输出坐标系>",
+      "max_age_s": "<FILL:P1最大帧龄秒>"
+    },
+    "P2": {
+      "processor_ref": "<FILL:P2处理器本地相对路径>",
+      "calibration_ref": "<FILL:P2标定本地相对路径>",
+      "input_frame": "<FILL:P2输入坐标系>",
+      "output_frame": "<FILL:P2输出坐标系>",
+      "max_age_s": "<FILL:P2最大帧龄秒>"
+    },
+    "P3": {
+      "processor_ref": "<FILL:P3处理器本地相对路径>",
+      "calibration_ref": "<FILL:P3标定本地相对路径>",
+      "input_frame": "<FILL:P3输入坐标系>",
+      "output_frame": "<FILL:P3输出坐标系>",
+      "max_age_s": "<FILL:P3最大帧龄秒>"
+    },
+    "P4": {
+      "processor_ref": "<FILL:P4处理器本地相对路径>",
+      "calibration_ref": "<FILL:P4标定本地相对路径>",
+      "input_frame": "<FILL:P4输入坐标系>",
+      "output_frame": "<FILL:P4输出坐标系>",
+      "max_age_s": "<FILL:P4最大帧龄秒>"
+    }
+  },
+  "receipts": {
+    "chassis_schema_ref": "<FILL:底盘回执schema本地相对路径>",
+    "vent_schema_ref": "<FILL:排风回执schema本地相对路径>",
+    "detach_schema_ref": "<FILL:摘管回执schema本地相对路径>",
+    "stow_schema_ref": "<FILL:归位回执schema本地相对路径>",
+    "acoustic_schema_ref": "<FILL:声学判据schema本地相对路径>",
+    "cancel_stop_schema_ref": "<FILL:取消及停稳回执schema本地相对路径>"
+  },
+  "safety": {
+    "rear_clearance_policy_ref": "<FILL:后方净空策略引用>",
+    "physical_stop_policy_ref": "<FILL:实体停稳确认策略引用>"
+  }
+}

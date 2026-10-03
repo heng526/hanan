@@ -1,0 +1,59 @@
+# 航点路线文件示例（示教录点工具自动生成，亦可手工编辑）
+# 坐标系：ENU 平面坐标，原点为作业区 RTK 参考点（origin 字段）
+# 生成时间: 2026-09-30 (示例)
+meta:
+  site: "SYNTHETIC_TEST_SITE"
+  origin_lat: 30.000000
+  origin_lon: 110.000000
+  origin_alt: 150.0
+  created_by: "record_route.py"
+  note: "示例路线：转场→过轨→作业接近→作业点→返航"
+
+route:
+  - name: "P01_出场"
+    type: "TRANSIT"
+    e: 10.0
+    n: 5.0
+    speed_limit: 1.5
+    pos_tol: 0.5
+
+  - name: "P02_轨前"
+    type: "TRACK_ENTRY"
+    e: 25.0
+    n: 5.0
+    speed_limit: 0.4
+    pos_tol: 0.3
+    heading: 0.0        # 与轨道垂直的过轨朝向
+    yaw_tol: 0.2
+
+  - name: "P03_过轨"
+    type: "CROSS"        # 抵达后交过轨执行器接管
+    e: 27.5
+    n: 5.0
+    speed_limit: 0.2
+    pos_tol: 0.25
+
+  - name: "P04_接近"
+    type: "WORK_APPROACH"
+    e: 40.0
+    n: 5.0
+    speed_limit: 0.4
+    pos_tol: 0.3
+
+  - name: "P05_作业点_C62_车顺位1_左侧"
+    type: "WORK_POINT"
+    e: 42.0
+    n: 5.0
+    speed_limit: 0.12
+    pos_tol: 0.08        # 作业点精度要求 ±8cm
+    heading: 1.5708      # 狗尾朝向车厢（垂直）
+    yaw_tol: 0.1
+    hold_time: 2.0       # 到位保持2s取RTK均值/留视觉对位时间
+    qr_code: "QR_0105"   # 地面二维码编号（精校正先验）
+
+  - name: "P06_返航"
+    type: "HOME"
+    e: 10.0
+    n: 5.0
+    speed_limit: 1.5
+    pos_tol: 0.5
